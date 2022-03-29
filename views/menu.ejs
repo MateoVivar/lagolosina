@@ -1,0 +1,139 @@
+<%- include("./parciales/header") %>
+
+	<!-- Content -->
+	<div class="container container-web-page">
+	    <h3 class="font-weight-bold poppins-regular text-uppercase">Menú del local de La Golosina de Antaño</h3>
+	    <p class="text-justify">Bienvenido al menú de platillos, acá encontrara todos los platillos disponibles en el restaurante.</p>
+		<p class="text-justify">Puede ordenar los platillos por categoría en el botón "<i class="fas fa-hamburger fa-fw"></i> MENÚ".</p>
+	    <div class="container-cards full-box" style="padding-bottom: 40px;">
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="/assets/platillos/platillo.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Nombre o titulo del platillo</h5>
+	                <p class="card-text lead"><span class="badge bg-secondary">$25.00 USD</span></p>
+	            </div>
+	            <div class="card-body text-center">
+	                <a href="/detalles" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="/assets/img/img_not_found.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Nombre o titulo del platillo</h5>
+	                <p class="card-text lead"><span class="badge bg-secondary">$25.00 USD</span></p>
+	            </div>
+	            <div class="card-body text-center">
+	                <a href="/detalles" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="/assets/platillos/platillo.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Nombre o titulo del platillo</h5>
+	                <p class="card-text lead"><span class="badge bg-secondary">$25.00 USD</span></p>
+	            </div>
+	            <div class="card-body text-center">
+	                <a href="/detalles" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="/assets/platillos/platillo.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Nombre o titulo del platillo</h5>
+	                <p class="card-text lead"><span class="badge bg-secondary">$25.00 USD</span></p>
+	            </div>
+	            <div class="card-body text-center">
+	                <a href="/detalles" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="./assets/img/img_not_found.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Nombre o titulo del platillo</h5>
+	                <p class="card-text lead"><span class="badge bg-secondary">$25.00 USD</span></p>
+	            </div>
+	            <div class="card-body text-center">
+	                <a href="/detalles" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="/assets/platillos/platillo.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Nombre o titulo del platillo</h5>
+	                <p class="card-text lead"><span class="badge bg-secondary">$25.00 USD</span></p>
+	            </div>
+	            <div class="card-body text-center">
+	                <a href="/detalles" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+
+	<% if(hayUsuario){ %>
+		<div class="container mb-4">
+			<div class="row">
+				<div class="col-12">
+					<form class="div-bordered"  style="padding: 15px;">
+	
+						<fieldset>
+							<legend><i class="far fa-address-card"></i> &nbsp; Formulario Bancario</legend>
+							**Este formulario es solo de prueba
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-12">
+										<span>Nombre de Cliente</span>
+										<div class="form-outline mb-4">
+											<input required="" type="text" class="form-control" name="nombre_cliente" id="" maxlength="30" value="<%= nombre %>">
+											<label for="cliente_numero_documento" class="form-label">Nombre de cliente<i class="fab fa-font-awesome-alt"></i></label>
+										</div>
+									</div>
+									<div class="col-12">
+										<span>Apellido de Cliente</span>
+										<div class="form-outline mb-4">
+											<input required="" type="text" class="form-control" name="apellido_cliente" id="" maxlength="30" value="<%= apellido %>">
+											<label for="cliente_numero_documento" class="form-label">Apellido de cliente<i class="fab fa-font-awesome-alt"></i></label>
+										</div>
+									</div>
+									<div class="col-12">
+										<span>Banco</span>
+										<div class="form-outline mb-4">
+											<input required="" type="text"  class="form-control" name="apellido_cliente" id="" maxlength="30">
+											<label for="cliente_numero_documento" class="form-label">Ingrese su Banco<i class="fab fa-font-awesome-alt"></i></label>
+										</div>
+									</div>
+									<div class="col-12">
+										<span>Número de cuenta Bancaria</span>
+										<div class="form-outline mb-4">
+											<input required="" type="text" pattern="[0-9()+]{8,20}" class="form-control" name="cliente_numero_documento_reg" id="cliente_numero_documento" maxlength="30">
+											<label for="cliente_numero_documento" class="form-label">Número de cuenta Bancaria<i class="fab fa-font-awesome-alt"></i></label>
+										</div>
+									</div>
+								   
+								</div>
+							</div>
+						</fieldset>
+	
+						<p class="text-center" style="margin-top: 40px;">
+							<button  class="btn btn-info btn-sm"><i class="far fa-paper-plane"></i> &nbsp; Aceptar pago</button>
+						</p>
+						<p class="text-center">
+							<small>Todos los campos <b>son</b> obligatorios</small>
+						</p>
+					</form>
+				</div>
+			</div>
+	
+		</div>
+	<% } %>
+
+	
+
+
+<%- include("./parciales/footer") %>

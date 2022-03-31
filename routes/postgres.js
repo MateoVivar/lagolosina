@@ -1,14 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const {Client}= require('pg');
+const cliente = require('../mysql/connection');
 
-const cliente = new Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'lga',
-    password: 'hola123',
-    port: 5432
-  });
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.send('Hola inicio')

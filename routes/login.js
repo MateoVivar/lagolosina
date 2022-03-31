@@ -3,18 +3,16 @@ var router = express.Router();
 const path = require('path');
 const {Client}= require('pg');
 
+const cliente = require('../mysql/connection');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log(req.query)
   const email = req.query.login_email_cliente;
   const contrasena = req.query.login_clave_cliente;
-  const cliente = new Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'lga',
-    password: 'hola123',
-    port: 5432
-  });
+  
+
+
   cliente.connect(async function(error){
         if(error){
             console.log('Cliente fallo en conectarse') 

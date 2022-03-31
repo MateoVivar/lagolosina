@@ -50,4 +50,9 @@ router.get('/', function(req, res, next) {
    })
 });
 
+router.get("/logout", function(req, res, next){
+   console.log("Me estoy saliendo");
+   req.session.destroy();
+   res.redirect('/inicio')
+});
 module.exports = router;

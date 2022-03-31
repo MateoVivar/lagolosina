@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
     if(!!req.session.user){
       nombreApellidoEnviar = req.session.user.nombre + " " + req.session.user.apellido
     }
-    res.render('details', {hayUsuario: hayUsuarioEnviar, nombreApellido: nombreApellidoEnviar})
+    res.render('index', {hayUsuario: hayUsuarioEnviar, nombreApellido: nombreApellidoEnviar})
 });
 
 module.exports = router;

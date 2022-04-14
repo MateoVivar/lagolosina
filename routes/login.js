@@ -21,6 +21,7 @@ router.get('/', function(req, res, next) {
             const buscarUsuario = `select * from usuarios where email = '${email}' and contrasena = '${contrasena}'`
             cliente.query(buscarUsuario,  function(error, respuesta){
                 if(error){
+                    console.log(error);
                     console.log('Error mientras se busca el Usuario');
                     res.redirect('/inicio')
                 }else{

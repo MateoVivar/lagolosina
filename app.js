@@ -14,6 +14,7 @@ var registroRouter = require('./routes/registro');
 var postgresRouter = require('./routes/postgres');
 var usuariosRouter = require('./routes/usuarios');
 var loginRouter = require('./routes/login');
+const { redirect } = require("express/lib/response");
 var app = express();
 
 var sessionConfig = {
@@ -72,7 +73,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.redirect('/inicio')
 });
 
 module.exports = app;
